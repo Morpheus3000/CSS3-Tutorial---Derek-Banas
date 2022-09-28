@@ -1,0 +1,73 @@
+@import "heading.css";
+@import "paragraph.css";
+
+/* Target everything. */
+/* The comma is required after the font names. */
+/* Font names that has a space in them, needs to be put in quoutes. */
+*{
+    font-family: "Arial Black", sans-serif;
+}
+
+/* Target everything within all divs */
+div *{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+/* Target all the elements with the class sitelink. */
+.sitelink{
+    font-family: Georgia, serif;
+}
+
+/* Target all the elements with the id tonyquote. */
+#tonyquote{
+    font-family: "Lucidia Sans Unicode", "Lucidia Grande", sans-serif;
+    color: black;
+}
+
+/* Target all the p with the class sitelink */
+p.sitelink{
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, sans-serif;
+    color: black;
+}
+
+/* Target all the spans with id tonyname. */
+span#tonyname{
+    font-family: "Times New Roman", Times, sans-serif;
+    color: blue;
+}
+
+/* Target all the li in ol with the id tutorials. That is id="tutorials" > ol > li. */
+#tutorials ol li{
+    color: purple;
+}
+
+/* Target all the li in ul with the id tutorials. That is id="tutorials" > ul > li. */
+#tutorials ul li{
+    color: green;
+}
+
+/* Target the p right after the h3. That is the sibling of h3. */
+h3 + p{
+    font-style: italic;
+}
+
+/* Target the link within p right after the h3. That is the child a within the sibling p. */
+h3 + p > a{
+    color: red;
+}
+
+/* Change every single paragraph that has a class  attribute. */
+p[class]{
+    background-color: gray;
+}
+
+/* Change every single paragraph that has an id  attribute. */
+p[id]{
+    background-color: yellow;
+}
+
+/* Target any element that has the attribute alt with the value nintendo. */
+/* double or single quotes doesn't seem to matter. */
+*[alt~='nintendo']{
+    background: orange;
+}

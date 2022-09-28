@@ -1,0 +1,97 @@
+/* Positioning */
+
+/* Unit types: px -> pixels
+pt -> points 72 points ~ 1 inch
+em -> current font size
+% -> percentage scale over current font size */
+#parent-div{
+    background-color: #b2beb5;
+    border: 0.1em solid black;
+}
+
+/* Overriding the element inside another element. That is styling covers the entirety with the previous statements. But then this line overrides the internal. We could explicitly target the child of the previous using the child selection symbol*/
+/* #default{
+    background: #DBE9F4;
+} */
+
+#parent-div > #default{
+    background: #DBE9F4;
+}
+
+#centered{
+    background: #89cff0;
+    /* 50% of the total area in the enclosing parent, here the parent div. */
+    width: 50%;
+    /* Equal amount on the right and left. */
+    margin: auto;
+}
+
+#centered-text{
+    text-align: center;
+}
+
+/* Absolute positiong */
+#top-left-pos{
+    background-color: #89cff0;
+    border: 0.1em solid black;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 4;
+}
+
+#bottom-right-tl-parent{
+    background-color: #dbe9f4;
+    position: absolute;
+    bottom: 0px;
+    right: 0px
+}
+
+#top-right-pos{
+    background-color: #89cff0;
+    border: 0.1em solid black;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0px;
+    right: 0px;
+}
+
+#bottom-left-tr-parent{
+    background-color: #dbe9f4;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+/* Fixed positioning */
+/* Positioning based on the browser. Whether the page scrolls or not, it is going to stay at the position. Like a persistent navbar. */
+#fixed-pos{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: #dbe9f4;
+    border: 0.1em solid black;
+    margin: 0;
+    z-index: -10;
+}
+
+/* Relative position */
+/* Positioning relative to where it is on the screen. That is relative to the original rendering location from the html. */
+
+#relative-1{
+    background-color: #dbe9f4;
+    border: 00.1em solid black;
+    height: 100px;
+}
+
+/* This shifts the element 20px to the right and 30px from the top from the position it was if the following styling was not applied. It also supports negative positions, which will just invert the direction. Like if top was -30px instead, it would move the section up from the it's original position rather than down. */
+#relative-2{
+    position: relative;
+    left: 20px;
+    top: 30px;
+    width: 300px;
+    background-color: yellow;
+    border: 00.1em solid black;
+}

@@ -95,3 +95,9 @@ em -> current font size
     background-color: yellow;
     border: 00.1em solid black;
 }
+
+/* Target html element with specific arguments. */
+img[src="cat.png"]{
+    float: left;
+    padding: 10px;
+}

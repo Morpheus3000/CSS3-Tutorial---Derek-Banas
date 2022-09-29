@@ -1,6 +1,9 @@
 @import "heading.css";
 @import "paragraph.css";
 
+/* . targets classes
+   # targets ids
+   <nothing> targets html elements directly. */
 /* Target everything. */
 /* The comma is required after the font names. */
 /* Font names that has a space in them, needs to be put in quoutes. */
